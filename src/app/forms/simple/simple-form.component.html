@@ -1,0 +1,12 @@
+
+<form [formGroup]="model">
+ <label>firstname:</label><input formControlName="firstname" name="firstname"><br>
+ <label>lastname:</label><input formControlName="lastname" name="lastname"><br>
+ <label>age:</label><input formControlName="age" name="age"><br>
+ <label>gender:</label><input formControlName="gender" name="gender"><br>
+ <label>country:</label><input formControlName="country" name="country"><br>
+ 
+ <button type="submit" [disabled]="model.invalid" (click)="onSubmit()">Send</button>
+</form>
+
+ <div [hidden]="model.valid">Invalid</div>
